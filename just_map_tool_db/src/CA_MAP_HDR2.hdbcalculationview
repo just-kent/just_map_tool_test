@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Just_Map_Tool_Test.just_map_tool_db::CA_MAP_HDR2" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CA_MAP_HDR2"/>
+<localVariables>
+  <variable id="IP_TABLE_ID" parameter="true">
+    <descriptions defaultDescription=""/>
+    <variableProperties datatype="NVARCHAR" length="4" mandatory="false">
+      <valueDomain type="empty"/>
+      <selection multiLine="false" type="Single"/>
+    </variableProperties>
+  </variable>
+</localVariables>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Just_Map_Tool_Test.just_map_tool_db::map_hdr">
+    <resourceUri>Just_Map_Tool_Test.just_map_tool_db::map_hdr</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:AggregationView" id="Projection_1" filterExpressionLanguage="COLUMN_ENGINE">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_SEQ">
+        <descriptions defaultDescription="OBJ_SEQ"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_TYP">
+        <descriptions defaultDescription="OBJ_TYP"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Just_Map_Tool_Test.just_map_tool_db::map_hdr">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="OBJ_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_SEQ" source="OBJ_SEQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_TYP" source="OBJ_TYP"/>
+    </input>
+    <filter>in(&quot;TABLE_ID&quot;,'$$IP_TABLE_ID$$')</filter>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="OBJ_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJ_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="OBJ_ID"/>
+    </attribute></attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="237"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

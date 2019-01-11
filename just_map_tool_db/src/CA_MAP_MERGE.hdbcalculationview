@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Just_Map_Tool_Test.just_map_tool_db::CA_MAP_MERGE" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CA_MAP_MERGE"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Just_Map_Tool_Test.just_map_tool_db::map_hdr">
+    <resourceUri>Just_Map_Tool_Test.just_map_tool_db::map_hdr</resourceUri>
+  </DataSource>
+  <DataSource id="Just_Map_Tool_Test.just_map_tool_db::map_data">
+    <resourceUri>Just_Map_Tool_Test.just_map_tool_db::map_data</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_MAP_HDR">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+    
+      <viewAttribute id="OBJ_SEQ">
+        <descriptions defaultDescription="OBJ_SEQ"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Just_Map_Tool_Test.just_map_tool_db::map_hdr">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="OBJ_ID"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_SEQ" source="OBJ_SEQ"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_MAP_DATA">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_01">
+        <descriptions defaultDescription="FLD_01"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_02">
+        <descriptions defaultDescription="FLD_02"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_03">
+        <descriptions defaultDescription="FLD_03"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_04">
+        <descriptions defaultDescription="FLD_04"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_05">
+        <descriptions defaultDescription="FLD_05"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_06">
+        <descriptions defaultDescription="FLD_06"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_07">
+        <descriptions defaultDescription="FLD_07"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_08">
+        <descriptions defaultDescription="FLD_08"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_09">
+        <descriptions defaultDescription="FLD_09"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_10">
+        <descriptions defaultDescription="FLD_10"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_11">
+        <descriptions defaultDescription="FLD_11"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_12">
+        <descriptions defaultDescription="FLD_12"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_13">
+        <descriptions defaultDescription="FLD_13"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_14">
+        <descriptions defaultDescription="FLD_14"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_15">
+        <descriptions defaultDescription="FLD_15"/>
+      </viewAttribute>
+      <viewAttribute id="SEQ_ID">
+        <descriptions defaultDescription="SEQ_ID"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Just_Map_Tool_Test.just_map_tool_db::map_data">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_01" source="FLD_01"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_02" source="FLD_02"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_03" source="FLD_03"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_04" source="FLD_04"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_05" source="FLD_05"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_06" source="FLD_06"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_07" source="FLD_07"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_08" source="FLD_08"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_09" source="FLD_09"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_10" source="FLD_10"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_11" source="FLD_11"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_12" source="FLD_12"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_13" source="FLD_13"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_14" source="FLD_14"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_15" source="FLD_15"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEQ_ID" source="SEQ_ID"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+    
+      <viewAttribute id="OBJ_SEQ">
+        <descriptions defaultDescription="OBJ_SEQ"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="P_MAP_HDR">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="OBJ_ID"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_SEQ" source="OBJ_SEQ"/>
+    </input>
+  
+    <filter>&quot;OBJ_SEQ&quot;='1'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+    
+      <viewAttribute id="OBJ_SEQ">
+        <descriptions defaultDescription="OBJ_SEQ"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="P_MAP_HDR">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="OBJ_ID"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_SEQ" source="OBJ_SEQ"/>
+    </input>
+  
+    <filter>&quot;OBJ_SEQ&quot;='2'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+    
+      <viewAttribute id="OBJ_SEQ">
+        <descriptions defaultDescription="OBJ_SEQ"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="P_MAP_HDR">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="OBJ_ID"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_SEQ" source="OBJ_SEQ"/>
+    </input>
+  
+    <filter>&quot;OBJ_SEQ&quot;='3'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID_1">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Projection_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="OBJ_ID"/>
+    </input>
+    <input node="Projection_2">
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID_1" source="OBJ_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+    </input>
+    <joinAttribute name="TABLE_ID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID_1">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID_2">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Join_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="OBJ_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID_1" source="OBJ_ID_1"/>
+    </input>
+    <input node="Projection_3">
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID_2" source="OBJ_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+    </input>
+    <joinAttribute name="TABLE_ID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID_1">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID_2">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Join_2">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="OBJ_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID_1" source="OBJ_ID_1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID_2" source="OBJ_ID_2"/>
+    </input>
+    <input node="P_MAP_DATA">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="FLD_01"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID_1" source="FLD_02"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID_2" source="FLD_03"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Union_1">
+  <attributes>
+    <attribute id="TABLE_ID" hidden="true" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TABLE_ID"/>
+      <keyMapping columnObjectName="Union_1" columnName="TABLE_ID"/>
+    </attribute>
+    <attribute id="OBJ_ID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJ_ID"/>
+      <keyMapping columnObjectName="Union_1" columnName="OBJ_ID"/>
+    </attribute>
+    <attribute id="OBJ_ID_1" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJ_ID"/>
+      <keyMapping columnObjectName="Union_1" columnName="OBJ_ID_1"/>
+    </attribute>
+    <attribute id="OBJ_ID_2" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJ_ID"/>
+      <keyMapping columnObjectName="Union_1" columnName="OBJ_ID_2"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="383.49902940351944" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="P_MAP_HDR" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="781.9999952316284"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="P_MAP_DATA" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="448.2352333960756" y="356.9999988079071"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="636.9999964237213"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="512" y="636.9999964237213"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="91.99999999999994" y="636.9999964237213"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="328.66666666666663" y="496.9999976158142"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="238.2352333960756" y="356.9999988079071"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Projection_3" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="383.49902940351944" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

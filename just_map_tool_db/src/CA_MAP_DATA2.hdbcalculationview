@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Just_Map_Tool_Test.just_map_tool_db::CA_MAP_DATA2" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CA_MAP_DATA2"/>
+<localVariables>
+  <variable id="IP_TABLE_ID" parameter="true">
+    <descriptions defaultDescription=""/>
+    <variableProperties datatype="NVARCHAR" length="4" mandatory="false">
+      <valueDomain type="empty"/>
+      <selection multiLine="false" type="Single"/>
+    </variableProperties>
+  </variable>
+</localVariables>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Just_Map_Tool_Test.just_map_tool_db::map_data">
+    <resourceUri>Just_Map_Tool_Test.just_map_tool_db::map_data</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_2" filterExpressionLanguage="COLUMN_ENGINE">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_01">
+        <descriptions defaultDescription="FLD_01"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_02">
+        <descriptions defaultDescription="FLD_02"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_03">
+        <descriptions defaultDescription="FLD_03"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_04">
+        <descriptions defaultDescription="FLD_04"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_05">
+        <descriptions defaultDescription="FLD_05"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_06">
+        <descriptions defaultDescription="FLD_06"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_07">
+        <descriptions defaultDescription="FLD_07"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_08">
+        <descriptions defaultDescription="FLD_08"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_09">
+        <descriptions defaultDescription="FLD_09"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_10">
+        <descriptions defaultDescription="FLD_10"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_11">
+        <descriptions defaultDescription="FLD_11"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_12">
+        <descriptions defaultDescription="FLD_12"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_13">
+        <descriptions defaultDescription="FLD_13"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_14">
+        <descriptions defaultDescription="FLD_14"/>
+      </viewAttribute>
+      <viewAttribute id="FLD_15">
+        <descriptions defaultDescription="FLD_15"/>
+      </viewAttribute>
+      <viewAttribute id="SEQ_ID">
+        <descriptions defaultDescription="SEQ_ID"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Just_Map_Tool_Test.just_map_tool_db::map_data">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_01" source="FLD_01"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_02" source="FLD_02"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_03" source="FLD_03"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_04" source="FLD_04"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_05" source="FLD_05"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_06" source="FLD_06"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_07" source="FLD_07"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_08" source="FLD_08"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_09" source="FLD_09"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_10" source="FLD_10"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_11" source="FLD_11"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_12" source="FLD_12"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_13" source="FLD_13"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_14" source="FLD_14"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FLD_15" source="FLD_15"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SEQ_ID" source="SEQ_ID"/>
+    </input>
+    <filter>in(&quot;TABLE_ID&quot;, '$$IP_TABLE_ID$$')</filter>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Aggregation_2">
+  <attributes>
+    <attribute id="FLD_01" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_01"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_01"/>
+    </attribute>
+    <attribute id="FLD_02" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_02"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_02"/>
+    </attribute>
+    <attribute id="FLD_03" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_03"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_03"/>
+    </attribute>
+    <attribute id="FLD_04" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_04"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_04"/>
+    </attribute>
+    <attribute id="FLD_05" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_05"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_05"/>
+    </attribute>
+    <attribute id="FLD_06" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_06"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_06"/>
+    </attribute>
+    <attribute id="FLD_07" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_07"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_07"/>
+    </attribute>
+    <attribute id="FLD_08" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_08"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_08"/>
+    </attribute>
+    <attribute id="FLD_09" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_09"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_09"/>
+    </attribute>
+    <attribute id="FLD_10" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_10"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_10"/>
+    </attribute>
+    <attribute id="FLD_11" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_11"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_11"/>
+    </attribute>
+    <attribute id="FLD_12" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_12"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_12"/>
+    </attribute>
+    <attribute id="FLD_13" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_13"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_13"/>
+    </attribute>
+    <attribute id="FLD_14" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_14"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_14"/>
+    </attribute>
+    <attribute id="FLD_15" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FLD_15"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="FLD_15"/>
+    </attribute>
+    <attribute id="SEQ_ID" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SEQ_ID"/>
+      <keyMapping columnObjectName="Aggregation_2" columnName="SEQ_ID"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Aggregation_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

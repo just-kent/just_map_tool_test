@@ -1,0 +1,4 @@
+service {
+ "Just_Map_Tool_Test.just_map_tool_db::CA_MAP_HDR2" as "just_map_hdr2" key ("OBJ_ID") ;
+ "Just_Map_Tool_Test.just_map_tool_db::CA_MAP_DATA2" as "just_map_data2" key ("FLD_01") ;
+}

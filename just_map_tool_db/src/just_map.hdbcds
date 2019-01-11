@@ -1,0 +1,30 @@
+namespace Just_Map_Tool_Test.just_map_tool_db;
+
+context just_map {
+
+/*@@layout{"layoutInfo":{}}*/
+        entity just_map_data {
+            key TABLE_ID : hana.ALPHANUM(4);
+			key FLD_01 : hana.ALPHANUM(10);
+			key FLD_02 : hana.ALPHANUM(10);
+			key FLD_03 : hana.ALPHANUM(10);
+			 FLD_04 : hana.ALPHANUM(10);
+			 FLD_05 : hana.ALPHANUM(10);
+			 FLD_06 : hana.ALPHANUM(10);
+			 FLD_07 : hana.ALPHANUM(10);
+			 FLD_08 : hana.ALPHANUM(10);
+			 FLD_09 : hana.ALPHANUM(10);
+			 FLD_10 : hana.ALPHANUM(10);
+			 FLD_11 : hana.ALPHANUM(10);
+			 FLD_12 : hana.ALPHANUM(10);
+			 FLD_13 : hana.ALPHANUM(10);
+			 FLD_14 : hana.ALPHANUM(10);
+			 FLD_15 : hana.ALPHANUM(10);
+			 key SEQ_ID : hana.ALPHANUM(2);
+        };
+        
+};
+
+
+
+        

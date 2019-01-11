@@ -1,0 +1,3 @@
+service {
+ "Just_Map_Tool_Test.just_map_tool_db::CA_MAP_HDR" as "just_map_hdr" key ("TABLE_ID","OBJ_SEQ");
+}

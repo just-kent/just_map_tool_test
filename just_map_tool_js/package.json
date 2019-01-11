@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@sap/xsjs": "3.3.7",
+    "@sap/xsenv": "1.2.9",
+    "express": "~4.15",
+    "@sap/xssec": "1.0.3",
+    "@sap/hdbext": "4.3.3",
+    "@sap/logging": "2.1.2",
+    "passport": "~0.3.2"
+  },
+  "devDependencies": {
+    "@sap/xsjs-test": "2.0.16"
+  },
+  "files": [],
+  "main": "server.js",
+  "name": "just_map_tool_js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node testrun.js"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "version": "1.0.0"
+}

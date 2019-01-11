@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Just_Map_Tool_Test.just_map_tool_db::CA_MAP_HDR" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CA_MAP_HDR"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Just_Map_Tool_Test.just_map_tool_db::map_hdr">
+    <resourceUri>Just_Map_Tool_Test.just_map_tool_db::map_hdr</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:AggregationView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="TABLE_ID">
+        <descriptions defaultDescription="TABLE_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_ID">
+        <descriptions defaultDescription="OBJ_ID"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_SEQ">
+        <descriptions defaultDescription="OBJ_SEQ"/>
+      </viewAttribute>
+      <viewAttribute id="OBJ_TYP">
+        <descriptions defaultDescription="OBJ_TYP"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Just_Map_Tool_Test.just_map_tool_db::map_hdr">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TABLE_ID" source="TABLE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_ID" source="OBJ_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_SEQ" source="OBJ_SEQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJ_TYP" source="OBJ_TYP"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="TABLE_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TABLE_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TABLE_ID"/>
+    </attribute>
+    <attribute id="OBJ_ID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJ_ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="OBJ_ID"/>
+    </attribute>
+    <attribute id="OBJ_SEQ" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJ_SEQ"/>
+      <keyMapping columnObjectName="Projection_1" columnName="OBJ_SEQ"/>
+    </attribute>
+    <attribute id="OBJ_TYP" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJ_TYP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="OBJ_TYP"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="237"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

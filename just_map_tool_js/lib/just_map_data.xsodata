@@ -1,0 +1,3 @@
+service {
+ "Just_Map_Tool_Test.just_map_tool_db::CA_MAP_DATA" as "just_map_data" key ("TABLE_ID","SEQ_ID") ;
+}

@@ -1,0 +1,34 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="xsa.just_map_tool_ui.controller.View1" displayBlock="true">
+	<Page title="Just Mapping Table XSA - Prototype" id="__page0">
+		<content><sap.ui.layout:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout" id="__layout0" class="sapUiSmallMargin">
+			    <sap.ui.layout:content>
+			        <Input xmlns="sap.m" id="i_tabid" value="" editable="true" fieldWidth="20%" width="100%"/>
+			        <Button xmlns="sap.m" text="Go" press="onTabIdSelect"/>
+			    </sap.ui.layout:content>
+			</sap.ui.layout:HorizontalLayout>
+			<Table id="just_map_list" items="{ path : 'just_map_hdr2>/just_map_data2' }" class="sapUiSmllMargin">
+				<columns>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onTablePress">
+						<cells/>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	<footer>
+	    <Bar id="__bar0">
+	        <contentRight>
+	            <Button text="Save" width="100px" id="b_saveBtn" press="handleSaveBtn"/>
+	        </contentRight>
+	    </Bar>
+	</footer>
+	</Page>
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content/>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
