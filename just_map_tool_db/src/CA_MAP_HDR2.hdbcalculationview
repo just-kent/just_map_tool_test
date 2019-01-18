@@ -48,7 +48,12 @@
     <attribute id="OBJ_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="OBJ_ID"/>
       <keyMapping columnObjectName="Projection_1" columnName="OBJ_ID"/>
-    </attribute></attributes>
+    </attribute>
+    <attribute id="OBJ_SEQ" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJ_SEQ"/>
+      <keyMapping columnObjectName="Projection_1" columnName="OBJ_SEQ"/>
+    </attribute>
+  </attributes>
   <calculatedAttributes/>
   <baseMeasures/>
   <calculatedMeasures/>

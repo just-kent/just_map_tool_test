@@ -5,9 +5,9 @@ context just_map {
 /*@@layout{"layoutInfo":{}}*/
         entity just_map_data {
             key TABLE_ID : hana.ALPHANUM(4);
-			key FLD_01 : hana.ALPHANUM(10);
-			key FLD_02 : hana.ALPHANUM(10);
-			key FLD_03 : hana.ALPHANUM(10);
+			 FLD_01 : hana.ALPHANUM(10);
+			 FLD_02 : hana.ALPHANUM(10);
+			 FLD_03 : hana.ALPHANUM(10);
 			 FLD_04 : hana.ALPHANUM(10);
 			 FLD_05 : hana.ALPHANUM(10);
 			 FLD_06 : hana.ALPHANUM(10);

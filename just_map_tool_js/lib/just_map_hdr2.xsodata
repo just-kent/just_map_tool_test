@@ -1,4 +1,4 @@
 service {
  "Just_Map_Tool_Test.just_map_tool_db::CA_MAP_HDR2" as "just_map_hdr2" key ("OBJ_ID") parameters via entity;
- "Just_Map_Tool_Test.just_map_tool_db::just_map.just_map_data" as "just_map_data";
+ "Just_Map_Tool_Test.just_map_tool_db::just_map.just_map_data" as "just_map_data"; 
 }

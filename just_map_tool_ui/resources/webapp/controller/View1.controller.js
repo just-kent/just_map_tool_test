@@ -64,12 +64,13 @@ sap.ui.define([
 				});
 			});
 
+			oTable.getBinding("columns").sort(new sap.ui.model.Sorter("OBJ_SEQ"));
 			var la_filters = new Array(); // Don't normally do this but just for the example.
 
 			var filterByTabId = new sap.ui.model.Filter({
 				path: "TABLE_ID",
 				operator: sap.ui.model.FilterOperator.EQ,
-				value1: "10"
+				value1: tabid
 			});
 			la_filters.push(filterByTabId);
 
@@ -77,7 +78,7 @@ sap.ui.define([
 
 			//var binding = list.getBinding("items");
 
-		//binding.filter(filters);
+			//binding.filter(filters);
 
 			oTable.getModel("just_map_data").read("/just_map_data", {
 				filters: la_filters,
@@ -100,7 +101,7 @@ sap.ui.define([
 
 						return row;
 					});
-					
+
 					var binding = oTable.getBinding("items");
 					binding.filter(la_filters);
 				},
@@ -110,10 +111,11 @@ sap.ui.define([
 			});
 
 		},
-		handleSaveBtn: function() {
+		handleSaveBtn: function(event) {
+			oview1Model2.setUseBatch(true);
 			var myTable = this.getView().byId("just_map_list");
 			var tabModel = this.getView().byId("just_map_list").getModel("just_map_data");
-			tabModel.updateBindings();
+			//tabModel.updateBindings();
 			var aContexts = myTable.getItems().map(function(oItem) {
 				return oItem.getBindingContext("just_map_hdr1").getPath(); // binding path
 			});
@@ -121,18 +123,30 @@ sap.ui.define([
 			//iterate over the context array and change values in the model
 			var ctxno = 0;
 			aContexts.forEach(function(sPath) {
+				var oEntry = {};
 				var data_length = myTable.getItems()[ctxno].getCells().length;
-				for (var i = 0; i < data_length - 1; i++) {
+				for (var i = 0; i < data_length; i++) {
 					var newval = myTable.getItems()[ctxno].getCells()[i].mProperties.value;
 					var fldno = i + 1;
 					var fldname = "";
 					if (fldno < 10) {
-						fldname = "/FLD_0";
+						fldname = "FLD_0";
 					} else {
-						fldname = "/FLD_";
+						fldname = "FLD_";
 					}
-					oview1Model2.setProperty(sPath + fldname + fldno, newval);
+					var fld = fldname + fldno;
+					oEntry[fld] = newval;
+					//oview1Model2.setProperty(sPath + fldname + fldno, newval);
 				}
+				oview1Model2.update(sPath, oEntry, {
+					method: "POST",
+					success: function(oData) {
+						sap.m.MessageToast.show("success sent!");
+					},
+					error: function(oError) {
+						sap.m.MessageToast.show("Error Saving Entries!!");
+					}
+				});
 				//this.getView().byId("just_map_list").getItems()[0].getCells()[1].mProperties.value;
 				ctxno = ctxno + 1;
 			});
@@ -154,7 +168,39 @@ sap.ui.define([
 					single: true
 				}
 			});*/
-			oview1Model2.setUseBatch(true);
+
+			//var oModel = new sap.ui.model.odata.ODataModel(‘/MyBlogProject/services / post.xsodata / ’, false);
+
+			//we create an object to be passed as a JSON object
+			/*var oEntry = {};
+				
+			//we add to the JSON object the values of the columns of the row we want to update
+			oEntry.TABLE_ID = "0020";
+			oEntry.FLD_01 = "SG01";
+			oEntry.FLD_02 = "SB";
+			oEntry.FLD_03 = "";
+			oEntry.FLD_04 = "";
+			oEntry.FLD_05 = "";
+			oEntry.FLD_06 = "";
+			oEntry.FLD_07 = "";
+			oEntry.FLD_08 = "";
+			oEntry.FLD_09 = "";
+			oEntry.FLD_10 = "";
+			oEntry.FLD_11 = "";
+			oEntry.FLD_12 = "";
+			oEntry.FLD_13 = "";
+			oEntry.FLD_14 = "";
+			oEntry.FLD_15 = "";
+			oEntry.SEQ_ID = "01";
+
+			//we perform the update request using the update() method of the model. Here we have to specify the “ID” of the post we want to update
+			oview1Model2.update("/just_map_data(TABLE_ID='0020',FLD_01='SG01',FLD_02='SG',FLD_03='',SEQ_ID='01')", oEntry, null, function() {
+					alert("Success");
+				},
+				function() {
+					alert("FAIL");
+				});*/
+
 			oview1Model2.submitChanges({
 				//groupId: "myGroupId",
 				success: function(oData, response) {
